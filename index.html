@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#333333">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="一曙光">
+  <title>一曙光 聊天</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- 註冊 / 登錄頁 -->
+  <div id="login-register" class="auth-box">
+    <h2>一曙光 聊天</h2>
+    <form id="auth-form">
+      <div class="input-group">
+        <label for="username">帳號（ID）</label>
+        <input type="text" id="username" placeholder="輸入ID" required>
+      </div>
+      <div class="input-group">
+        <label for="password">密碼（必須5個數字）</label>
+        <input type="password" id="password" placeholder="輸入密碼" required>
+      </div>
+      <div class="button-group">
+        <button type="submit" id="submit-btn">登錄</button>
+        <button type="button" id="register-btn">註冊</button>
+      </div>
+      <p id="error-msg"></p>
+    </form>
+  </div>
+
+  <!-- 設置名稱頁 -->
+  <div id="setup-name" class="auth-box" style="display: none;">
+    <h2>設置您的個人資料</h2>
+    <form id="setup-form">
+      <div class="input-group">
+        <label for="display-name">顯示名稱</label>
+        <input type="text" id="display-name" placeholder="設置顯示名稱" required>
+      </div>
+      <div class="input-group">
+        <label for="personal-id">專屬 ID</label>
+        <input type="text" id="personal-id" placeholder="設置專屬ID" required>
+      </div>
+      <button type="submit">設置</button>
+    </form>
+  </div>
+
+  <!-- 聊天界面 -->
+  <div id="chat-box" style="display: none;">
+    <div id="header">
+      <h2>一曙光 聊天</h2>
+      <button id="logout-btn">登出</button>
+      <button id="clear-chat-btn">清除聊天</button>
+    </div>
+    <div id="messages" class="messages"></div>
+    <textarea id="message-input" placeholder="輸入消息..." rows="3"></textarea>
+    <button id="send-btn">發送</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
